@@ -26,11 +26,11 @@ const handleAddBlog = (newBlog) => {
     newBlog.id = generateRandomId();
   }
   
-  newBlog.createdAt = getCurrentDate();
+  newBlog.publishDate = getCurrentDate();
   addItem(newBlog);
   showEditor.value = false;
   console.log(newBlog.id);
-  console.log(newBlog.createdAt);
+  console.log(newBlog.publishDate);
 };
 
 const handleDeleteBlog = (id) => {
