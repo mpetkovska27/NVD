@@ -19,12 +19,13 @@ const { blogs, isLoading, error, addItem, deleteItem } = useBlogs();
 const showEditor = ref(false);
 
 const generateRandomId = () => `${Date.now()}-${Math.floor(Math.random() * 10000)}`;
-const getCurrentDate = () => new Date().toISOString();
+const getCurrentDate = () => new Date().toDateString();
 
 const handleAddBlog = (newBlog) => {
     if (!newBlog.id) {
     newBlog.id = generateRandomId();
   }
+  
   newBlog.createdAt = getCurrentDate();
   addItem(newBlog);
   showEditor.value = false;

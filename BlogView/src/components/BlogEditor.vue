@@ -32,10 +32,10 @@
         </div>
 
         <div class="field">
-            <label for="content">Content</label>
+            <label for="description">Content</label>
             <textarea
-        v-model="content"
-        id="content"
+        v-model="description"
+        id="description"
         rows="4"
         class="input"
       ></textarea>
@@ -57,7 +57,7 @@ export default {
       title: '',
       author: '',
       id: '',
-      content: '',
+      description: '',
     };
   },
   methods: {
@@ -66,13 +66,13 @@ export default {
         title: this.title,
         author: this.author,
         id: this.id,
-        content: this.content,
+        description: this.description,
       });
 
       this.title = '';
       this.author = '';
       this.id = '';
-      this.content = '';
+      this.description = '';
     },
     
   },

@@ -4,7 +4,7 @@
 
     <div v-if="isLoading">Loading...</div>
     
-    <div v-else-if="error">{{ error.message }}</div>
+    <div v-else-if="error">{{ "Error!" }}</div>
     
     <section v-else>
       <!-- Search input -->
@@ -29,7 +29,7 @@
           value="description"
           v-model="filters"
         />        
-        <label for="content">By Content</label>
+        <label for="description">By Content</label>
       </fieldset>
 
       <!-- List of articles -->
@@ -44,10 +44,10 @@
               />
               <div class="article-text">
               <div class="date">
-                {{ new Date(blog.publishDate).toDateString() }}
+                {{ new Date(blog.createdAt).toDateString() }}
               </div>
               <h4>{{ blog.title }}</h4>
-              <p>{{ blog.description }}</p>
+              <p>{{ blog.description }}</p>            
               </div>
             </div>
             <div class="delete-button-container">
